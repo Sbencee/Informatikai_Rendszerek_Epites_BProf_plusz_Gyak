@@ -1,0 +1,1 @@
+# Informatikai_Rendszerek_Epites_BProf_plusz_Gyak
