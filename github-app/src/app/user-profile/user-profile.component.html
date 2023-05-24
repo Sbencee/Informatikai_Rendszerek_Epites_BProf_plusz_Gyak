@@ -1,0 +1,11 @@
+<!-- UserProfileComponent template -->
+<h2>{{ user.login }}</h2>
+<img [src]="user.avatar_url" alt="User Avatar">
+<p>{{ user.bio }}</p>
+
+<h3>Repositories</h3>
+<ul>
+  <li *ngFor="let repo of repos">
+    <a [routerLink]="['/repository', repo.owner.login, repo.name]">{{ repo.name }}</a>
+  </li>
+</ul>

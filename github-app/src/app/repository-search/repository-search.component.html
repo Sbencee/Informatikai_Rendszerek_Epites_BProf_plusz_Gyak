@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="input-group mb-3">
+      <input [(ngModel)]="searchQuery" type="text" class="form-control" placeholder="Search Repositories">
+      <button (click)="searchRepositories()" class="btn btn-outline-secondary" type="button">Search</button>
+    </div>
+  
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let repo of repositories">
+        <a [routerLink]="['/repo', repo.owner.login, repo.name]">{{ repo.name }}</a>
+      </li>
+    </ul>
+  </div>
+  

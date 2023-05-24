@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="input-group mb-3">
+      <input [(ngModel)]="searchQuery" type="text" class="form-control" placeholder="Search Users">
+      <button (click)="searchUsers()" class="btn btn-outline-secondary" type="button">Search</button>
+    </div>
+  
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let user of users">
+        <a [routerLink]="['/user-profile', user.login]">{{ user.login }}</a>
+      </li>
+    </ul>
+  </div>
+  
