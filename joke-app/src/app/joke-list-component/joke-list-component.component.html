@@ -1,0 +1,14 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h3 class="mb-4 text-primary">Total Score: <span class="text-dark font-weight-bold">{{ getTotalScore() }}</span></h3>
+      <h3 class="mb-4 text-success">Total Likes: <span class="text-dark font-weight-bold">{{ getTotalLikes() }}</span></h3>
+      <h3 class="mb-4 text-danger">Total Dislikes: <span class="text-dark font-weight-bold">{{ getTotalDislikes() }}</span></h3>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-12">
+      <app-joke *ngFor="let joke of getJokes()" [joke]="joke"></app-joke>
+    </div>
+  </div>
+</div>
